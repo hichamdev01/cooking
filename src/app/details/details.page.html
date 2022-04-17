@@ -1,10 +1,11 @@
 <ion-card>
   <ion-card-header>
-    <ion-card-subtitle>{{id}}</ion-card-subtitle>
-    <ion-card-title>ingredients</ion-card-title>
+    <ion-card-subtitle>ingredients</ion-card-subtitle>
+    <ion-card-title>{{id}}</ion-card-title>
   </ion-card-header>
 
   <ion-card-content>
-    {{ingredients}}
+    <img [src]="recipe?.image">
+    <ion-label>{{recipe?.description}}</ion-label>
   </ion-card-content> 
 </ion-card>

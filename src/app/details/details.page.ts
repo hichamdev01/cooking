@@ -17,13 +17,11 @@ export class DetailsPage implements OnInit {
     this.id = this.route.snapshot.params['id'];
     this.getDataById();
   }
-
   getDataById(){
     this.service.getData().subscribe((data : any) => {
       this.recipe = data.recipe.filter(x=>x.id==this.id)
-      console.log(this.recipe)
-      this.ingredients =data.recipe.ingredient.name
-      
+      this.recipe = this.recipe[0];
+      console.log(this.recipe);
     })
   }
 
