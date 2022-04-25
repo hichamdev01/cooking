@@ -1,3 +1,4 @@
+<ion-content>
 <ion-card>
   <ion-card-header>
     <ion-card-subtitle>ingredients</ion-card-subtitle>
@@ -8,4 +9,16 @@
     <img [src]="recipe?.image">
     <ion-label>{{recipe?.description}}</ion-label>
   </ion-card-content> 
+
+<ion-badge color="danger" class="full-badge">ingredients</ion-badge>
+<ion-list>
+  <ion-item *ngFor="let item of ingredients"> 
+    <ion-label>{{item.name}}</ion-label>
+    <ion-badge *ngIf="item.amount != null" color="warning">{{item.amount}}</ion-badge>
+    <ion-badge *ngIf="item.unit != null" color="primary">{{item.unit}}</ion-badge>
+  </ion-item>
+  
+</ion-list>
+
 </ion-card>
+</ion-content>
