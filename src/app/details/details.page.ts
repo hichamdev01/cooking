@@ -11,7 +11,8 @@ import {ingredient} from '../home/model/Ingredient'
 export class DetailsPage implements OnInit {
   id ;
   recipe : recipe;
-  ingredients : any
+  ingredients : any;
+  steps : any;
   constructor(private route : ActivatedRoute,private service : DaaService) { }
 
   ngOnInit() {
@@ -24,8 +25,7 @@ export class DetailsPage implements OnInit {
       this.recipe = this.recipe[0];
       console.log(this.recipe);
       this.ingredients = this.recipe.ingredient
-     
-      
+      this.steps = this.recipe.step;
     })
   }
 

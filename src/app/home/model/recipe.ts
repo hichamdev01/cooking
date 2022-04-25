@@ -7,5 +7,6 @@ export interface recipe{
     ingredient : string[];
     step : string[];
     recipe : recipe[]
+    notes : string;
 
 }

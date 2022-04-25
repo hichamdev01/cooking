@@ -17,8 +17,19 @@
     <ion-badge *ngIf="item.amount != null" color="warning">{{item.amount}}</ion-badge>
     <ion-badge *ngIf="item.unit != null" color="primary">{{item.unit}}</ion-badge>
   </ion-item>
-  
 </ion-list>
-
+<ion-badge color="tertiary" class="full-badge">steps</ion-badge>
+<ion-list>
+  <ion-item  *ngFor="let item of steps ; let i = index"> 
+    <ion-label class="step">{{i+1 +" - " + item.description}}</ion-label>
+  </ion-item>
+</ion-list>
 </ion-card>
+<ion-card>
+  <ion-badge color="success" class="full-badge">note !!</ion-badge>
+  <ion-item>
+    <ion-label class="step">{{recipe?.notes}}</ion-label>
+  </ion-item>
+</ion-card>
+
 </ion-content>
